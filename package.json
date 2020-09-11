@@ -1,0 +1,40 @@
+{
+  "name": "gas-menus",
+  "version": "0.0.1",
+  "description": "Menu building utilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "declare": "tsc --declaration --declarationDir ./types --emitDeclarationOnly",
+    "push": "clasp push --force",
+    "version": "npm run push && clasp deploy -i AKfycbw2eIp9oW4D6wN1GJxImbmfGmPEPUd8-6ZTWmWbGK3MqVxZ1t8R1xnOXYjXfGjqHfVJ"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Oaphi/gas-menus.git"
+  },
+  "keywords": [
+    "google-apps-script",
+    "javascript",
+    "menu",
+    "utilities"
+  ],
+  "author": "Oleg Valter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Oaphi/gas-menus/issues"
+  },
+  "homepage": "https://github.com/Oaphi/gas-menus#readme",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.16",
+    "@types/node": "^14.10.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^7.8.1",
+    "mocha": "^8.1.3",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {}
+}

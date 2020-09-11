@@ -1,0 +1,9 @@
+.eslint*
+
+**/node_modules/**
+
+*.json
+
+types/**
+
+!appsscript.json

@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "none",
+        "types": ["node", "google-apps-script"],
+        "target": "ES2019",
+        "lib": ["ESNext"],
+        "pretty": true,
+        "noImplicitUseStrict": true,
+        "declaration": true,
+        "declarationDir": "./types",
+        "experimentalDecorators": true
+    }
+}
