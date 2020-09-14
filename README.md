@@ -8,6 +8,7 @@ MenuApp is a small library for building custom menus from JSON configuration.
 
 ````
 const menu = MenuApp.buildMenu({
+    type  : MenuApp.DocTypes.DOCUMENT,
     title : "My Menu",
     items : [{
         title : "My Action",

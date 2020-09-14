@@ -1,4 +1,4 @@
-import { buildMenu_ } from "./builders";
+import { buildMenu_, DocTypes } from "./builders";
 
 declare namespace Menu {
 
@@ -14,6 +14,7 @@ var MenuApp : Menu.MenuApp = (() => {
 
     return Object.seal({
       buildMenu : buildMenu_,
+      DocTypes,
     });
 
 })();

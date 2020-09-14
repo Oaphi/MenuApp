@@ -1,9 +1,4 @@
-enum DocTypes {
-  SPREADSHEET = "spreadsheet",
-  PRESENTATION = "presentation",
-  FORM = "form",
-  DOCUMENT = "document",
-}
+import { DocTypes, getActiveUI_ } from "./activeDoc";
 
 enum ItemTypes {
   MENU = "menu",
@@ -34,20 +29,11 @@ const buildMenu_: buildMenu = (
     title: "Menu",
   }
 ) => {
-  const uiMap = new Map([
-    [DocTypes.DOCUMENT, DocumentApp.getUi],
-    [DocTypes.FORM, FormApp.getUi],
-    [DocTypes.SPREADSHEET, SpreadsheetApp.getUi],
-    [DocTypes.PRESENTATION, SlidesApp.getUi],
-  ]);
+  const ui = getActiveUI_({ type: docType });
 
-  const uiGetter = uiMap.get(docType);
-
-  if (!uiGetter) {
+  if (!ui) {
     return null;
   }
-
-  const ui = uiGetter();
 
   const menu = ui.createMenu(title);
 
@@ -73,4 +59,4 @@ const buildMenu_: buildMenu = (
   return menu;
 };
 
-export { buildMenu_ };
+export { buildMenu_, DocTypes };

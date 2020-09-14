@@ -1,9 +1,12 @@
 {
     "compilerOptions": {
+        "forceConsistentCasingInFileNames": true,
+        "removeComments": true,
         "module": "none",
         "types": ["node", "google-apps-script"],
         "target": "ES2019",
         "lib": ["ESNext"],
+        "downlevelIteration": true,
         "pretty": true,
         "noImplicitUseStrict": true,
         "declaration": true,
