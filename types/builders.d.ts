@@ -1,29 +1,23 @@
 /// <reference types="google-apps-script" />
-declare enum DocTypes {
-    SPREADSHEET = "spreadsheet",
-    PRESENTATION = "presentation",
-    FORM = "form",
-    DOCUMENT = "document"
-}
-declare enum ItemTypes {
+import { DocTypes } from "./active";
+export declare enum ItemTypes {
     MENU = "menu",
     ITEM = "item",
     SEPARATOR = "separator"
 }
-declare interface ItemOptions {
+export interface ItemOptions {
     title: string;
     type?: ItemTypes;
     items?: ItemOptions[];
     action: string;
 }
-declare interface BuildMenuOptions {
+export interface BuildMenuOptions {
     title: string;
     docType?: DocTypes;
     items?: ItemOptions[];
     append?: boolean;
 }
-declare interface buildMenu {
+export interface buildMenu {
     (options: BuildMenuOptions): GoogleAppsScript.Base.Menu | null;
 }
-declare const buildMenu_: buildMenu;
-export { buildMenu_ };
+export declare const buildMenu_: buildMenu;
