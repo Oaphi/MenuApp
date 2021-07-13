@@ -9,7 +9,6 @@
         "lib": ["esnext"],
         "downlevelIteration": true,
         "pretty": true,
-        "declaration": true,
         "experimentalDecorators": true,
         "moduleResolution": "node",
         "outFile": "dist/index.js",
