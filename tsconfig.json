@@ -1,16 +1,20 @@
 {
     "compilerOptions": {
+        "strict": true,
         "forceConsistentCasingInFileNames": true,
         "removeComments": true,
-        "module": "none",
+        "skipLibCheck": true,
         "types": ["node", "google-apps-script"],
-        "target": "ES2019",
-        "lib": ["ESNext"],
+        "target": "es2019",
+        "lib": ["esnext"],
         "downlevelIteration": true,
         "pretty": true,
-        "noImplicitUseStrict": true,
         "declaration": true,
-        "declarationDir": "./types",
-        "experimentalDecorators": true
-    }
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "outFile": "dist/index.js",
+        "rootDir": "src"
+    },
+    "include": ["src"],
+    "exclude": ["dist", "node_modules"]
 }
