@@ -7,6 +7,9 @@
 # source files
 src/**/*
 
+# test files
+test/**/*
+
 # declaration files
 **/*.d.ts
 
