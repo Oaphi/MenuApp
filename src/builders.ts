@@ -31,12 +31,12 @@ const buildMenu_: buildMenu = (
         const { title, type = ItemTypes.ITEM, action, items } = item;
 
         if (type === ItemTypes.MENU || items) {
-            const submenuConfig = Object.assign(item, {
+            const submenu = buildMenu_({
+                ...item,
                 append: false,
                 docType,
             });
 
-            const submenu = buildMenu_(submenuConfig);
             return submenu && menu.addSubMenu(submenu);
         }
 
