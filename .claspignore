@@ -1,11 +1,14 @@
-.eslint*
-
+# any node dependency
 **/node_modules/**
 
+# data store files
 *.json
 
-types/**
-
+# source files
 src/**/*
 
+# declaration files
+**/*.d.ts
+
+# manifest should always be included
 !appsscript.json
