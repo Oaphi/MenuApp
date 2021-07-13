@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha -r ts-node/register",
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc && npm run test",
+    "build": "npm run clean && npm run test && tsc",
     "push": "npm run build && clasp push --force",
     "declare": "tsc --declaration --declarationDir ./types --emitDeclarationOnly",
     "deploy": "clasp deploy -i AKfycbw2eIp9oW4D6wN1GJxImbmfGmPEPUd8-6ZTWmWbGK3MqVxZ1t8R1xnOXYjXfGjqHfVJ",
@@ -30,7 +30,9 @@
   },
   "homepage": "https://github.com/Oaphi/gas-menus#readme",
   "devDependencies": {
+    "@types/chai": "^4.2.21",
     "@types/google-apps-script": "^1.0.36",
+    "@types/mocha": "^8.2.3",
     "@types/node": "^16.3.1",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
@@ -38,6 +40,7 @@
     "chai-as-promised": "^7.1.1",
     "eslint": "^7.30.0",
     "mocha": "^9.0.2",
+    "ts-node": "^10.1.0",
     "typescript": "^4.3.5"
   }
 }

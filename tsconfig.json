@@ -4,7 +4,7 @@
         "forceConsistentCasingInFileNames": true,
         "removeComments": true,
         "skipLibCheck": true,
-        "types": ["node", "google-apps-script"],
+        "types": ["node", "google-apps-script", "mocha", "chai"],
         "target": "es2019",
         "lib": ["esnext"],
         "downlevelIteration": true,
