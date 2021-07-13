@@ -1,24 +1,18 @@
-import { buildMenu_, DocTypes } from "./builders";
-
-declare namespace Menu {
-
-  type buildMenu = typeof buildMenu_;
-
-  export interface MenuApp {
-    buildMenu : buildMenu;
-  }
-
+enum DocTypes {
+    SPREADSHEET = "spreadsheet",
+    PRESENTATION = "presentation",
+    FORM = "form",
+    DOCUMENT = "document",
 }
 
-var MenuApp : Menu.MenuApp = (() => {
+enum ItemTypes {
+    MENU = "menu",
+    ITEM = "item",
+    SEPARATOR = "separator",
+}
 
-    return Object.seal({
-      buildMenu : buildMenu_,
-      DocTypes,
-    });
-
-})();
-
-var buildMenu : Menu.buildMenu = (options) => MenuApp.buildMenu(options);
-
-export { MenuApp, buildMenu };
+Object.assign(this, {
+    DocTypes,
+    ItemTypes,
+    buildMenu: buildMenu_,
+});
