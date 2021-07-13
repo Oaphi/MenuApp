@@ -1,62 +1,51 @@
-import { DocTypes, getActiveUI_ } from "./activeDoc";
-
-enum ItemTypes {
-  MENU = "menu",
-  ITEM = "item",
-  SEPARATOR = "separator",
+interface ItemOptions {
+    title: string;
+    type?: ItemTypes;
+    items?: ItemOptions[];
+    action: string;
 }
 
-declare interface ItemOptions {
-  title: string;
-  type?: ItemTypes;
-  items?: ItemOptions[];
-  action: string;
+interface BuildMenuOptions {
+    title: string;
+    docType?: DocTypes;
+    items?: ItemOptions[];
+    append?: boolean;
+    ui?: GoogleAppsScript.Base.Ui;
 }
 
-declare interface BuildMenuOptions {
-  title: string;
-  docType?: DocTypes;
-  items?: ItemOptions[];
-  append?: boolean;
-}
-
-declare interface buildMenu {
-  (options: BuildMenuOptions): GoogleAppsScript.Base.Menu | null;
+interface buildMenu {
+    (options: BuildMenuOptions): GoogleAppsScript.Base.Menu | null;
 }
 
 const buildMenu_: buildMenu = (
-  { docType = DocTypes.SPREADSHEET, append = true, title, items = [] } = {
-    title: "Menu",
-  }
+    { docType = DocTypes.SPREADSHEET, append = true, title, items = [] } = {
+        title: "Menu",
+    }
 ) => {
-  const ui = getActiveUI_({ type: docType });
+    const ui = getActiveUI_({ type: docType });
+    if (!ui) return null;
 
-  if (!ui) {
-    return null;
-  }
+    const menu = ui.createMenu(title);
 
-  const menu = ui.createMenu(title);
+    items.forEach((item) => {
+        const { title, type = ItemTypes.ITEM, action, items } = item;
 
-  items.forEach((item) => {
-    const { title, type = ItemTypes.ITEM, action, items } = item;
+        if (type === ItemTypes.MENU || items) {
+            const submenuConfig = Object.assign(item, {
+                append: false,
+                docType,
+            });
 
-    if (type === ItemTypes.MENU || items) {
-      const submenuConfig = Object.assign(item, { append: false, docType });
-      return menu.addSubMenu(buildMenu_(submenuConfig));
-    }
+            const submenu = buildMenu_(submenuConfig);
+            return submenu && menu.addSubMenu(submenu);
+        }
 
-    if (type === ItemTypes.ITEM) {
-      return menu.addItem(title, action);
-    }
+        if (type === ItemTypes.ITEM) return menu.addItem(title, action);
 
-    if (type === ItemTypes.SEPARATOR) {
-      return menu.addSeparator();
-    }
-  });
+        if (type === ItemTypes.SEPARATOR) return menu.addSeparator();
+    });
 
-  append && menu.addToUi();
+    append && menu.addToUi();
 
-  return menu;
+    return menu;
 };
-
-export { buildMenu_, DocTypes };
