@@ -4,10 +4,14 @@
   "description": "Menu building utilities",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha -r ts-node/register",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && npm run test",
+    "push": "npm run build && clasp push --force",
     "declare": "tsc --declaration --declarationDir ./types --emitDeclarationOnly",
-    "push": "clasp push --force",
-    "version": "npm run push && clasp deploy -i AKfycbw2eIp9oW4D6wN1GJxImbmfGmPEPUd8-6ZTWmWbGK3MqVxZ1t8R1xnOXYjXfGjqHfVJ"
+    "deploy": "clasp deploy -i AKfycbw2eIp9oW4D6wN1GJxImbmfGmPEPUd8-6ZTWmWbGK3MqVxZ1t8R1xnOXYjXfGjqHfVJ",
+    "version": "npm run push && npm run deploy",
+    "list": "clasp deployments"
   },
   "repository": {
     "type": "git",
@@ -35,6 +39,5 @@
     "eslint": "^7.8.1",
     "mocha": "^8.1.3",
     "typescript": "^4.0.2"
-  },
-  "dependencies": {}
+  }
 }
