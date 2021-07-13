@@ -1,6 +1,6 @@
 {
   "name": "gas-menus",
-  "version": "0.0.1",
+  "version": "0.15.0",
   "description": "Menu building utilities",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "push": "npm run build && clasp push --force",
     "declare": "tsc --declaration --declarationDir ./types --emitDeclarationOnly",
     "deploy": "clasp deploy -i AKfycbw2eIp9oW4D6wN1GJxImbmfGmPEPUd8-6ZTWmWbGK3MqVxZ1t8R1xnOXYjXfGjqHfVJ",
-    "version": "npm run push && npm run deploy",
+    "update": "npm run push && npm run deploy",
+    "version:minor": "npm run update && npm version minor",
     "list": "clasp deployments"
   },
   "repository": {
