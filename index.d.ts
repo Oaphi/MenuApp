@@ -25,12 +25,14 @@ declare namespace GoogleAppsScript {
         interface BuildMenuOptions {
             title: string;
             docType?: DocTypes;
-            items?: ItemOptions[];
+            items?: (ItemOptions | { type: ItemTypes.SEPARATOR })[];
             append?: boolean;
             ui?: GoogleAppsScript.Base.Ui;
         }
 
         interface MenuApp {
+            DocTypes: typeof DocTypes;
+            ItemTypes: typeof ItemTypes;
             buildMenu: (
                 options: BuildMenuOptions
             ) => GoogleAppsScript.Base.Menu | null;
