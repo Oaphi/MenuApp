@@ -4,9 +4,6 @@
 # data store files
 *.json
 
-# source files
-src/**/*
-
 # test files
 test/**/*
 
