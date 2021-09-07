@@ -18,5 +18,5 @@ jobs:
               run: npm install
               env:
                   NODE_AUTH_TOKEN: ${{github.token}}
-            # - name: Run tests
-            #   run: npm run test
+            - name: Run tests
+              run: npm run test
