@@ -5,14 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -r ts-node/register",
-    "clean": "rm -rf dist",
-    "build": "npm run clean && npm run test && tsc",
-    "push": "npm run build && clasp push --force",
-    "declare": "tsc --declaration --declarationDir ./types --emitDeclarationOnly",
-    "deploy": "clasp deploy -i AKfycbw2eIp9oW4D6wN1GJxImbmfGmPEPUd8-6ZTWmWbGK3MqVxZ1t8R1xnOXYjXfGjqHfVJ",
-    "update": "npm run push && npm run deploy",
-    "version:minor": "npm run update && npm version minor",
-    "list": "clasp deployments"
+    "push": "clasp push --force",
+    "version": "npm run push",
+    "postversion": "bash ./scripts/postversion.sh"
   },
   "repository": {
     "type": "git",
