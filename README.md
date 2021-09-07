@@ -25,7 +25,7 @@ const menu = MenuApp.buildMenu({
 
 # Install
 
-> Latest library version: 16
+> Latest library version: 17
 
 If developing locally, add the project info to manifest file's `dependencies.libraries` list:
 
@@ -42,7 +42,7 @@ Sample JSON object to add:
 {
     "libraryId": "1wr0xwr-RgfP0j9acfpJy2ESd3q4oqgM2bt0mgOemhRGS-U2N1XDxRuYk",
     "userSymbol": "MenuApp",
-    "version": "16",
+    "version": "17",
     "developmentMode": false
 }
 ```
