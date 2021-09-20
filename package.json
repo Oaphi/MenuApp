@@ -29,7 +29,7 @@
     "@types/chai": "^4.2.21",
     "@types/google-apps-script": "^1.0.37",
     "@types/mocha": "^8.2.3",
-    "@types/node": "^16.9.2",
+    "@types/node": "^16.9.4",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "chai": "^4.3.4",
