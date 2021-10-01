@@ -7,19 +7,25 @@ MenuApp is a small library for building custom menus from JSON configuration.
 
 ```javascript
 const menu = MenuApp.buildMenu({
-    type  : MenuApp.DocTypes.DOCUMENT,
-    title : "My Menu",
-    items : [{
-        title : "My Action",
-        action : "runMyAction"
-    },{
-        title : "Submenu",
-        items : [{
-            title : "My Second Action",
-            actions : "MyLib.doSomething"
-        }]
-    }],
-    append : true
+    type: MenuApp.DocTypes.DOCUMENT,
+    title: "My Menu",
+    items: [
+        {
+            title: "My Action",
+            action: runMyAction.name,
+        },
+        {
+            title: "Submenu",
+            items: [
+                {
+                    title: "My Second Action",
+                    actions: "MyLib.doSomething",
+                },
+                MenuApp.createSeparatorItem(),
+            ],
+        },
+    ],
+    append: true,
 });
 ```
 
