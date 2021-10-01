@@ -15,5 +15,6 @@ Object.assign(this, {
     DocTypes,
     ItemTypes,
     buildMenu: buildMenu_,
+    createActionItem: createAction_,
     createSeparatorItem: createSeparator_,
 });
