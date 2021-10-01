@@ -33,7 +33,7 @@ const getActiveUI_ = ({
             : [...ActiveDocMap.values()].find(isCorrectUIgetter_)!;
         return valid();
     } catch (error) {
-        onError(error);
+        onError(error as Error);
         return null;
     }
 };
