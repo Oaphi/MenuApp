@@ -14,6 +14,7 @@ const menu = MenuApp.buildMenu({
             title: "My Action",
             action: runMyAction.name,
         },
+        MenuApp.createActionItem("Item from function", myCallback),
         {
             title: "Submenu",
             items: [
