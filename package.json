@@ -1,42 +1,43 @@
 {
-  "name": "gas-menus",
-  "version": "0.17.0",
-  "description": "Menu building utilities",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha -r ts-node/register",
-    "push": "clasp push --force",
-    "version": "npm run push",
-    "postversion": "bash ./scripts/postversion.sh"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/Oaphi/gas-menus.git"
-  },
-  "keywords": [
-    "google-apps-script",
-    "javascript",
-    "menu",
-    "utilities"
-  ],
-  "author": "Oleg Valter",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Oaphi/gas-menus/issues"
-  },
-  "homepage": "https://github.com/Oaphi/gas-menus#readme",
-  "devDependencies": {
-    "@types/chai": "^4.2.22",
-    "@types/google-apps-script": "^1.0.37",
-    "@types/mocha": "^8.2.3",
-    "@types/node": "^16.10.1",
-    "@typescript-eslint/eslint-plugin": "^4.31.2",
-    "@typescript-eslint/parser": "^4.31.2",
-    "chai": "^4.3.4",
-    "chai-as-promised": "^7.1.1",
-    "eslint": "^7.32.0",
-    "mocha": "^9.1.2",
-    "ts-node": "^10.2.1",
-    "typescript": "^4.4.3"
-  }
+    "name": "gas-menus",
+    "version": "0.17.0",
+    "description": "Menu building utilities",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha -r ts-node/register",
+        "push": "clasp push --force",
+        "version": "npm run push",
+        "typecheck": "tsc --noEmit",
+        "postversion": "bash ./scripts/postversion.sh"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Oaphi/gas-menus.git"
+    },
+    "keywords": [
+        "google-apps-script",
+        "javascript",
+        "menu",
+        "utilities"
+    ],
+    "author": "Oleg Valter",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Oaphi/gas-menus/issues"
+    },
+    "homepage": "https://github.com/Oaphi/gas-menus#readme",
+    "devDependencies": {
+        "@types/chai": "^4.2.22",
+        "@types/google-apps-script": "^1.0.37",
+        "@types/mocha": "^8.2.3",
+        "@types/node": "^16.10.1",
+        "@typescript-eslint/eslint-plugin": "^4.31.2",
+        "@typescript-eslint/parser": "^4.31.2",
+        "chai": "^4.3.4",
+        "chai-as-promised": "^7.1.1",
+        "eslint": "^7.32.0",
+        "mocha": "^9.1.2",
+        "ts-node": "^10.2.1",
+        "typescript": "^4.4.3"
+    }
 }
