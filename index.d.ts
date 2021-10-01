@@ -36,6 +36,7 @@ declare namespace GoogleAppsScript {
             buildMenu: (
                 options: BuildMenuOptions
             ) => GoogleAppsScript.Base.Menu | null;
+            createSeparatorItem: () => { type: ItemTypes.SEPARATOR };
         }
     }
 }
