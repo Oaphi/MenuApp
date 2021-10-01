@@ -37,7 +37,10 @@ declare namespace GoogleAppsScript {
                 options: BuildMenuOptions
             ) => GoogleAppsScript.Base.Menu | null;
             createSeparatorItem: () => { type: ItemTypes.SEPARATOR };
-            createActionItem: () => {
+            createActionItem: (
+                title: string,
+                action: (...args: any[]) => any
+            ) => {
                 type: ItemTypes.ITEM;
                 title: string;
                 action: string;

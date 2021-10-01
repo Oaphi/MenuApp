@@ -51,7 +51,7 @@ Menu item type (required if adding a special items): `ItemTypes`
 
 # Install
 
-> Latest library version: 18
+> Latest library version: 19
 
 If developing locally, add the project info to manifest file's `dependencies.libraries` list:
 
@@ -68,7 +68,7 @@ Sample JSON object to add:
 {
     "libraryId": "1wr0xwr-RgfP0j9acfpJy2ESd3q4oqgM2bt0mgOemhRGS-U2N1XDxRuYk",
     "userSymbol": "MenuApp",
-    "version": "18",
+    "version": "19",
     "developmentMode": false
 }
 ```

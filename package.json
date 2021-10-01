@@ -1,6 +1,6 @@
 {
     "name": "gas-menus",
-    "version": "0.18.0",
+    "version": "0.19.0",
     "description": "Menu building utilities",
     "main": "index.js",
     "scripts": {
