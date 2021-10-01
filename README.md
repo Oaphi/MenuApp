@@ -23,6 +23,25 @@ const menu = MenuApp.buildMenu({
 });
 ```
 
+The library exposes two utility enums accessible via `<user symbol>.<enum name>`:
+
+Parent document type: `DocTypes`
+
+| Value        |
+| ------------ |
+| SPREADSHEET  |
+| PRESENTATION |
+| FORM         |
+| DOCUMENT     |
+
+Menu item type (required if adding a special items): `ItemTypes`
+
+| Value     |
+| --------- |
+| MENU      |
+| ITEM      |
+| SEPARATOR |
+
 # Install
 
 > Latest library version: 17
