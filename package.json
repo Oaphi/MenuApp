@@ -28,7 +28,7 @@
     "homepage": "https://github.com/Oaphi/gas-menus#readme",
     "devDependencies": {
         "@types/chai": "^4.2.22",
-        "@types/google-apps-script": "^1.0.39",
+        "@types/google-apps-script": "^1.0.40",
         "@types/mocha": "^8.2.3",
         "@types/node": "^16.11.7",
         "@typescript-eslint/eslint-plugin": "^4.33.0",
